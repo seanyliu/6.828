@@ -1,0 +1,1073 @@
+obj/user/testpiperace2.o: user/testpiperace2.c ./inc/lib.h ./inc/types.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/idle.o: user/idle.c ./inc/x86.h ./inc/types.h ./inc/lib.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/fprintf.o: lib/fprintf.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/entry.o: kern/entry.S ./inc/mmu.h ./inc/memlayout.h ./inc/trap.h
+obj/user/testpteshare.o: user/testpteshare.c ./inc/x86.h ./inc/types.h \
+  ./inc/lib.h ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/tcp_out.o: net/lwip/core/tcp_out.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/tcp.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/inet_chksum.h \
+  ./net/lwip/include/lwip/stats.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/snmp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/udp.h ./inc/string.h
+obj/kern/console.o: kern/console.c ./inc/x86.h ./inc/types.h \
+  ./inc/memlayout.h ./inc/queue.h ./inc/mmu.h ./inc/kbdreg.h \
+  ./inc/string.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./kern/console.h ./kern/picirq.h
+obj/lib/fsipc.o: lib/fsipc.c ./inc/fs.h ./inc/types.h ./inc/lib.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/entry.o: lib/entry.S ./inc/mmu.h ./inc/memlayout.h
+obj/lib/file.o: lib/file.c ./inc/fs.h ./inc/types.h ./inc/string.h \
+  ./inc/lib.h ./inc/stdio.h ./inc/stdarg.h ./inc/error.h ./inc/assert.h \
+  ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fd.h ./inc/args.h ./inc/malloc.h ./inc/ns.h \
+  ./net/lwip/include/lwip/sockets.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/jos/lwipopts.h ./net/lwip/include/lwip/debug.h \
+  ./net/lwip/include/lwip/arch.h ./net/lwip/jos/arch/cc.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/echo.o: user/echo.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/pmap.o: kern/pmap.c ./inc/x86.h ./inc/types.h ./inc/mmu.h \
+  ./inc/error.h ./inc/string.h ./inc/assert.h ./inc/stdio.h \
+  ./inc/stdarg.h ./kern/pmap.h ./inc/memlayout.h ./inc/queue.h \
+  ./kern/kclock.h ./kern/env.h ./inc/env.h ./inc/trap.h
+obj/net/lwip/core/ipv4/inet_chksum.o: net/lwip/core/ipv4/inet_chksum.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/ipv4/lwip/inet_chksum.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h
+obj/user/primes.o: user/primes.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/pgfault.o: lib/pgfault.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/cat.o: user/cat.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/sched.o: kern/sched.c ./inc/assert.h ./inc/stdio.h \
+  ./inc/stdarg.h ./kern/env.h ./inc/env.h ./inc/types.h ./inc/queue.h \
+  ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h ./kern/pmap.h \
+  ./kern/monitor.h
+obj/lib/spawn.o: lib/spawn.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./inc/elf.h
+obj/lib/readline.o: lib/readline.c ./inc/stdio.h ./inc/stdarg.h \
+  ./inc/error.h
+obj/kern/syscall.o: kern/syscall.c ./inc/x86.h ./inc/types.h \
+  ./inc/error.h ./inc/string.h ./inc/assert.h ./inc/stdio.h \
+  ./inc/stdarg.h ./kern/env.h ./inc/env.h ./inc/queue.h ./inc/trap.h \
+  ./inc/memlayout.h ./inc/mmu.h ./kern/pmap.h ./kern/trap.h \
+  ./kern/syscall.h ./inc/syscall.h ./kern/console.h ./kern/sched.h \
+  ./kern/time.h ./kern/e100.h ./kern/pci.h ./kern/pcireg.h
+obj/user/testfdsharing.o: user/testfdsharing.c ./inc/x86.h ./inc/types.h \
+  ./inc/lib.h ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/ipv4/icmp.o: net/lwip/core/ipv4/icmp.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/ipv4/lwip/icmp.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/inet_chksum.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/stats.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/memp_std.h \
+  ./net/lwip/include/lwip/snmp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./inc/string.h
+obj/lib/pipe.o: lib/pipe.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/testmalloc.o: user/testmalloc.c ./inc/lib.h ./inc/types.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/fd.o: lib/fd.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/libmain.o: lib/libmain.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/string.o: lib/string.c ./inc/string.h ./inc/types.h
+obj/net/lwip/core/sys.o: net/lwip/core/sys.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/jos/arch/sys_arch.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/lwip/tcpip.h \
+  ./net/lwip/include/lwip/api_msg.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/include/ipv4/lwip/igmp.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/api.h \
+  ./net/lwip/include/lwip/netbuf.h ./net/lwip/include/lwip/netifapi.h
+obj/lib/fork.o: lib/fork.c ./inc/string.h ./inc/types.h ./inc/lib.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/e100.o: kern/e100.c ./inc/x86.h ./inc/types.h ./inc/assert.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./kern/e100.h ./kern/pci.h \
+  ./kern/pcireg.h ./kern/pmap.h ./inc/memlayout.h ./inc/queue.h \
+  ./inc/mmu.h ./kern/env.h ./inc/env.h ./inc/trap.h
+obj/lib/malloc.o: lib/malloc.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/pingpong.o: user/pingpong.c ./inc/lib.h ./inc/types.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/nsipc.o: lib/nsipc.c ./inc/ns.h ./inc/types.h \
+  ./net/lwip/include/lwip/sockets.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/jos/lwipopts.h ./net/lwip/include/lwip/debug.h \
+  ./net/lwip/include/lwip/arch.h ./net/lwip/jos/arch/cc.h ./inc/assert.h \
+  ./inc/stdio.h ./inc/stdarg.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./inc/lib.h ./inc/string.h \
+  ./inc/error.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h
+obj/kern/pci.o: kern/pci.c ./inc/x86.h ./inc/types.h ./inc/assert.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./kern/pci.h \
+  ./kern/pcireg.h ./kern/e100.h
+obj/net/lwip/jos/arch/sys_arch.o: net/lwip/jos/arch/sys_arch.c \
+  ./inc/lib.h ./inc/types.h ./inc/stdio.h ./inc/stdarg.h ./inc/string.h \
+  ./inc/error.h ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h \
+  ./inc/memlayout.h ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h \
+  ./inc/args.h ./inc/malloc.h ./inc/ns.h \
+  ./net/lwip/include/lwip/sockets.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/jos/lwipopts.h ./net/lwip/include/lwip/debug.h \
+  ./net/lwip/include/lwip/arch.h ./net/lwip/jos/arch/cc.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/jos/arch/sys_arch.h \
+  ./net/lwip/jos/arch/thread.h ./net/lwip/jos/arch/cc.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/jos/arch/perror.h
+obj/fs/ide.o: fs/ide.c fs/fs.h ./inc/fs.h ./inc/types.h ./inc/lib.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./inc/x86.h
+obj/kern/printf.o: kern/printf.c ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h
+obj/user/lsfd.o: user/lsfd.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/init.o: net/lwip/core/init.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/init.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/stats.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/memp_std.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/sockets.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/raw.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/udp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/lwip/tcp.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/autoip.h \
+  ./net/lwip/include/ipv4/lwip/igmp.h ./net/lwip/include/lwip/dns.h \
+  ./net/lwip/include/netif/etharp.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/ip.h
+obj/fs/fs.o: fs/fs.c ./inc/string.h ./inc/types.h fs/fs.h ./inc/fs.h \
+  ./inc/lib.h ./inc/stdio.h ./inc/stdarg.h ./inc/error.h ./inc/assert.h \
+  ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fd.h ./inc/args.h ./inc/malloc.h ./inc/ns.h \
+  ./net/lwip/include/lwip/sockets.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/jos/lwipopts.h ./net/lwip/include/lwip/debug.h \
+  ./net/lwip/include/lwip/arch.h ./net/lwip/jos/arch/cc.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/stats.o: net/lwip/core/stats.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h
+obj/net/lwip/netif/etharp.o: net/lwip/netif/etharp.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/stats.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/memp_std.h \
+  ./net/lwip/include/lwip/snmp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./net/lwip/include/lwip/dhcp.h ./net/lwip/include/ipv4/lwip/autoip.h \
+  ./net/lwip/include/netif/etharp.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./inc/string.h
+obj/net/lwip/core/netif.o: net/lwip/core/netif.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/tcp.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/ipv4/lwip/icmp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/snmp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/include/ipv4/lwip/igmp.h \
+  ./net/lwip/include/netif/etharp.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/ip.h
+obj/net/lwip/core/mem.o: net/lwip/core/mem.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/jos/arch/sys_arch.h \
+  ./net/lwip/include/lwip/stats.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/memp_std.h \
+  ./inc/string.h
+obj/boot/boot.o: boot/boot.S ./inc/mmu.h
+obj/kern/trap.o: kern/trap.c ./inc/mmu.h ./inc/types.h ./inc/x86.h \
+  ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h ./kern/pmap.h \
+  ./inc/memlayout.h ./inc/queue.h ./kern/trap.h ./inc/trap.h \
+  ./kern/console.h ./kern/monitor.h ./kern/env.h ./inc/env.h \
+  ./kern/syscall.h ./inc/syscall.h ./kern/sched.h ./kern/kclock.h \
+  ./kern/picirq.h ./kern/time.h ./kern/e100.h ./kern/pci.h \
+  ./kern/pcireg.h
+obj/kern/trapentry.o: kern/trapentry.S ./inc/mmu.h ./inc/memlayout.h \
+  ./inc/trap.h ./kern/picirq.h
+obj/net/lwip/jos/jif/jif.o: net/lwip/jos/jif/jif.c ./inc/lib.h \
+  ./inc/types.h ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/jos/jif/jif.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/include/lwip/stats.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/netif/etharp.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/err.h
+obj/net/lwip/api/sockets.o: net/lwip/api/sockets.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/sockets.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/api.h \
+  ./net/lwip/include/lwip/netbuf.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/include/ipv4/lwip/igmp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/lwip/tcp.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/lwip/raw.h ./net/lwip/include/lwip/udp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/lwip/tcpip.h \
+  ./net/lwip/include/lwip/api_msg.h ./net/lwip/include/ipv4/lwip/igmp.h \
+  ./net/lwip/include/lwip/api.h ./net/lwip/include/lwip/netifapi.h \
+  ./inc/string.h
+obj/lib/console.o: lib/console.c ./inc/string.h ./inc/types.h ./inc/lib.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/testkbd.o: user/testkbd.c ./inc/lib.h ./inc/types.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/api/netbuf.o: net/lwip/api/netbuf.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/netbuf.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/memp_std.h \
+  ./inc/string.h
+obj/fs/serv.o: fs/serv.c ./inc/x86.h ./inc/types.h ./inc/string.h fs/fs.h \
+  ./inc/fs.h ./inc/lib.h ./inc/stdio.h ./inc/stdarg.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/string.o: lib/string.c ./inc/string.h ./inc/types.h
+obj/boot/main.o: boot/main.c ./inc/x86.h ./inc/types.h ./inc/elf.h
+obj/kern/init.o: kern/init.c ./inc/stdio.h ./inc/stdarg.h ./inc/string.h \
+  ./inc/types.h ./inc/assert.h ./kern/monitor.h ./kern/console.h \
+  ./kern/pmap.h ./inc/memlayout.h ./inc/queue.h ./inc/mmu.h \
+  ./kern/kclock.h ./kern/env.h ./inc/env.h ./inc/trap.h ./kern/trap.h \
+  ./kern/sched.h ./kern/picirq.h ./inc/x86.h ./kern/time.h ./kern/pci.h
+obj/net/lwip/core/raw.o: net/lwip/core/raw.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/memp_std.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/raw.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/stats.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/snmp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/jos/arch/perf.h ./inc/string.h
+obj/lib/printf.o: lib/printf.c ./inc/types.h ./inc/stdio.h ./inc/stdarg.h \
+  ./inc/lib.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/dhcp.o: net/lwip/core/dhcp.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/stats.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/include/lwip/dhcp.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/include/ipv4/lwip/autoip.h \
+  ./net/lwip/include/lwip/dns.h ./net/lwip/include/netif/etharp.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./inc/string.h
+obj/net/lwip/jos/arch/thread.o: net/lwip/jos/arch/thread.c ./inc/lib.h \
+  ./inc/types.h ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/jos/arch/thread.h \
+  ./net/lwip/jos/arch/threadq.h ./net/lwip/jos/arch/setjmp.h \
+  ./net/lwip/jos/arch/i386/setjmp.h
+obj/kern/printfmt.o: lib/printfmt.c ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h
+obj/net/lwip/api/api_lib.o: net/lwip/api/api_lib.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/api.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/netbuf.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/tcpip.h \
+  ./net/lwip/include/lwip/api_msg.h ./net/lwip/include/ipv4/lwip/igmp.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/api.h ./net/lwip/include/lwip/netifapi.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/memp_std.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/raw.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/udp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/lwip/tcp.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./inc/string.h
+obj/lib/pfentry.o: lib/pfentry.S ./inc/mmu.h ./inc/memlayout.h
+obj/lib/syscall.o: lib/syscall.c ./inc/syscall.h ./inc/lib.h \
+  ./inc/types.h ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/fs/fsformat: fs/fsformat.c /usr/include/stdio.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-32.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h /usr/include/bits/stdio2.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/time.h \
+  /usr/include/endian.h /usr/include/bits/endian.h \
+  /usr/include/bits/byteswap.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+  /usr/include/bits/stdlib.h /usr/include/fcntl.h \
+  /usr/include/bits/fcntl.h /usr/include/bits/fcntl2.h \
+  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+  /usr/include/bits/confname.h /usr/include/getopt.h \
+  /usr/include/bits/unistd.h /usr/include/inttypes.h \
+  /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/sys/stat.h \
+  /usr/include/bits/stat.h /usr/include/string.h \
+  /usr/include/bits/string.h /usr/include/bits/string2.h \
+  /usr/include/bits/string3.h /usr/include/assert.h /usr/include/errno.h \
+  /usr/include/bits/errno.h /usr/include/linux/errno.h \
+  /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h /usr/include/dirent.h \
+  /usr/include/bits/dirent.h /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/include/limits.h /usr/include/bits/posix2_lim.h inc/mmu.h \
+  inc/types.h inc/fs.h
+obj/net/lwip/core/tcp.o: net/lwip/core/tcp.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/lwip/snmp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/tcp.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/jos/arch/sys_arch.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/lwip/netif.h ./inc/string.h
+obj/lib/exit.o: lib/exit.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/panic.o: lib/panic.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/monitor.o: kern/monitor.c ./inc/stdio.h ./inc/stdarg.h \
+  ./inc/string.h ./inc/types.h ./inc/memlayout.h ./inc/queue.h \
+  ./inc/mmu.h ./inc/assert.h ./inc/x86.h ./kern/console.h \
+  ./kern/monitor.h ./kern/kdebug.h ./kern/trap.h ./inc/trap.h \
+  ./kern/pmap.h
+obj/user/testpipe.o: user/testpipe.c ./inc/lib.h ./inc/types.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/sockets.o: lib/sockets.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/memp.o: net/lwip/core/memp.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/udp.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/raw.h ./net/lwip/include/lwip/tcp.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/jos/arch/sys_arch.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/igmp.h \
+  ./net/lwip/include/lwip/api.h ./net/lwip/include/lwip/netbuf.h \
+  ./net/lwip/include/lwip/api_msg.h ./net/lwip/include/ipv4/lwip/igmp.h \
+  ./net/lwip/include/lwip/api.h ./net/lwip/include/lwip/tcpip.h \
+  ./net/lwip/include/lwip/api_msg.h ./net/lwip/include/lwip/netifapi.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/include/lwip/stats.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/netif/etharp.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/ip.h \
+  ./net/lwip/include/ipv4/lwip/ip_frag.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./inc/string.h \
+  ./net/lwip/include/lwip/memp_std.h
+obj/net/lwip/jos/arch/perror.o: net/lwip/jos/arch/perror.c \
+  ./net/lwip/jos/arch/perror.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/types.h ./inc/assert.h ./inc/stdio.h \
+  ./inc/stdarg.h
+obj/user/icode.o: user/icode.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/kdebug.o: kern/kdebug.c ./inc/stab.h ./inc/types.h \
+  ./inc/string.h ./inc/memlayout.h ./inc/queue.h ./inc/mmu.h \
+  ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h ./kern/kdebug.h \
+  ./kern/pmap.h ./kern/env.h ./inc/env.h ./inc/trap.h
+obj/user/prfork.o: user/prfork.c ./inc/string.h ./inc/types.h ./inc/lib.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/kclock.o: kern/kclock.c ./inc/x86.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/isareg.h ./inc/timerreg.h ./kern/kclock.h \
+  ./kern/picirq.h
+obj/net/lwip/core/ipv4/ip_addr.o: net/lwip/core/ipv4/ip_addr.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/pbuf.h
+obj/net/lwip/core/ipv4/inet.o: net/lwip/core/ipv4/inet.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/printfmt.o: lib/printfmt.c ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h
+obj/net/lwip/jos/arch/longjmp.o: net/lwip/jos/arch/longjmp.S
+obj/lib/wait.o: lib/wait.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/forktree.o: user/forktree.c ./inc/lib.h ./inc/types.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/api/err.o: net/lwip/api/err.c ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h
+obj/net/lwip/api/api_msg.o: net/lwip/api/api_msg.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/api_msg.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/include/ipv4/lwip/igmp.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/api.h \
+  ./net/lwip/include/lwip/netbuf.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/tcp.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/lwip/raw.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/lwip/tcpip.h \
+  ./net/lwip/include/lwip/api_msg.h ./net/lwip/include/lwip/netifapi.h \
+  ./net/lwip/include/ipv4/lwip/igmp.h ./net/lwip/include/lwip/dns.h
+obj/kern/readline.o: lib/readline.c ./inc/stdio.h ./inc/stdarg.h \
+  ./inc/error.h
+obj/net/lwip/api/tcpip.o: net/lwip/api/tcpip.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/jos/arch/sys_arch.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/memp_std.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/ipv4/lwip/ip_frag.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/tcp.h ./net/lwip/include/lwip/sys.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/ipv4/lwip/autoip.h ./net/lwip/include/lwip/dhcp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/lwip/udp.h \
+  ./net/lwip/include/ipv4/lwip/igmp.h ./net/lwip/include/lwip/dns.h \
+  ./net/lwip/include/lwip/tcpip.h ./net/lwip/include/lwip/api_msg.h \
+  ./net/lwip/include/ipv4/lwip/igmp.h ./net/lwip/include/lwip/api.h \
+  ./net/lwip/include/lwip/netbuf.h ./net/lwip/include/lwip/netifapi.h \
+  ./net/lwip/include/lwip/init.h ./net/lwip/include/netif/etharp.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/netif/ppp_oe.h
+obj/fs/test.o: fs/test.c ./inc/x86.h ./inc/types.h ./inc/string.h fs/fs.h \
+  ./inc/fs.h ./inc/lib.h ./inc/stdio.h ./inc/stdarg.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/testpiperace.o: user/testpiperace.c ./inc/lib.h ./inc/types.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/env.o: kern/env.c ./inc/x86.h ./inc/types.h ./inc/mmu.h \
+  ./inc/error.h ./inc/string.h ./inc/assert.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/elf.h ./kern/env.h ./inc/env.h ./inc/queue.h \
+  ./inc/trap.h ./inc/memlayout.h ./kern/pmap.h ./kern/trap.h \
+  ./kern/monitor.h ./kern/sched.h
+obj/user/sh.o: user/sh.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/ipv4/ip_frag.o: net/lwip/core/ipv4/ip_frag.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/ipv4/lwip/ip_frag.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/inet_chksum.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/lwip/snmp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/lwip/udp.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/stats.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./inc/string.h
+obj/net/lwip/core/pbuf.o: net/lwip/core/pbuf.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/stats.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/jos/arch/sys_arch.h \
+  ./net/lwip/jos/arch/perf.h ./inc/string.h
+obj/user/num.o: user/num.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/ipv4/ip.o: net/lwip/core/ipv4/ip.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/ipv4/lwip/ip_frag.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/pbuf.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/inet_chksum.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/ipv4/lwip/igmp.h ./net/lwip/include/lwip/raw.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/udp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/lwip/tcp.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/jos/arch/sys_arch.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/lwip/snmp.h ./net/lwip/include/lwip/udp.h \
+  ./net/lwip/include/lwip/dhcp.h ./net/lwip/include/lwip/stats.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/memp_std.h \
+  ./net/lwip/jos/arch/perf.h
+obj/user/ls.o: user/ls.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/tcp_in.o: net/lwip/core/tcp_in.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/tcp.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/sys.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/jos/arch/sys_arch.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/ipv4/lwip/ip.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/err.h ./net/lwip/include/ipv4/lwip/icmp.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/inet.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/mem.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/inet_chksum.h \
+  ./net/lwip/include/lwip/stats.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/snmp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/jos/arch/perf.h
+obj/lib/ipc.o: lib/ipc.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/kern/picirq.o: kern/picirq.c ./inc/assert.h ./inc/stdio.h \
+  ./inc/stdarg.h ./kern/picirq.h ./inc/types.h ./inc/x86.h
+obj/kern/time.o: kern/time.c ./kern/time.h ./inc/assert.h ./inc/stdio.h \
+  ./inc/stdarg.h
+obj/user/hello.o: user/hello.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/init.o: user/init.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/core/udp.o: net/lwip/core/udp.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/include/lwip/opt.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/netif.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/ipv4/lwip/ip.h ./net/lwip/include/lwip/def.h \
+  ./net/lwip/include/lwip/pbuf.h ./net/lwip/include/lwip/err.h \
+  ./net/lwip/include/lwip/def.h ./net/lwip/include/lwip/memp.h \
+  ./net/lwip/include/lwip/memp_std.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/inet_chksum.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/ipv4/lwip/icmp.h ./net/lwip/include/lwip/netif.h \
+  ./net/lwip/include/lwip/stats.h ./net/lwip/include/lwip/mem.h \
+  ./net/lwip/include/lwip/memp.h ./net/lwip/include/lwip/snmp.h \
+  ./net/lwip/include/lwip/udp.h ./net/lwip/jos/arch/perf.h \
+  ./net/lwip/include/lwip/dhcp.h ./inc/string.h
+obj/user/testshell.o: user/testshell.c ./inc/x86.h ./inc/types.h \
+  ./inc/lib.h ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/lib/pageref.o: lib/pageref.c ./inc/lib.h ./inc/types.h ./inc/stdio.h \
+  ./inc/stdarg.h ./inc/string.h ./inc/error.h ./inc/assert.h ./inc/env.h \
+  ./inc/queue.h ./inc/trap.h ./inc/memlayout.h ./inc/mmu.h \
+  ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h ./inc/malloc.h \
+  ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/user/primespipe.o: user/primespipe.c ./inc/lib.h ./inc/types.h \
+  ./inc/stdio.h ./inc/stdarg.h ./inc/string.h ./inc/error.h \
+  ./inc/assert.h ./inc/env.h ./inc/queue.h ./inc/trap.h ./inc/memlayout.h \
+  ./inc/mmu.h ./inc/syscall.h ./inc/fs.h ./inc/fd.h ./inc/args.h \
+  ./inc/malloc.h ./inc/ns.h ./net/lwip/include/lwip/sockets.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./net/lwip/include/ipv4/lwip/ip_addr.h \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/include/ipv4/lwip/inet.h \
+  ./net/lwip/include/ipv4/lwip/ip_addr.h
+obj/net/lwip/netif/loopif.o: net/lwip/netif/loopif.c \
+  ./net/lwip/include/lwip/opt.h ./net/lwip/jos/lwipopts.h ./inc/types.h \
+  ./net/lwip/include/lwip/debug.h ./net/lwip/include/lwip/arch.h \
+  ./net/lwip/jos/arch/cc.h ./inc/assert.h ./inc/stdio.h ./inc/stdarg.h

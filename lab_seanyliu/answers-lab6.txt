@@ -1,0 +1,54 @@
+Sean Liu
+6.828
+Nov 23, 2009
+
+Lab 6
+
+1. How did you structure your transmit implementation? In particular, what do you do if the transmit ring is full?
+
+Pre-transmit we do:
+  a. Initialize the CBL and set all the links to hook up the ring.
+  b. Initialize the CBL TCB header statuses to be processed.
+  c. Insert a NOP (so that it can be consumed by the cu_start())
+  d. Start the CU.
+
+The overall transmit goes as follows:
+  a. Move the pointer to the "cbl_to_process" to the next TCB that hasn't been processed.
+  b. Check if there is room to copy in the packet.  If not, return a -E100_NO_MEM;
+  c. Copy the packet data into the next TCB, set the command on the TCB to be transmit, move the Suspend bit.
+
+If the transmit ring is full, we simply throw an error (i.e. drop the packet) and expect the user process to keep track and resend if needed.  Therefore in net/output.c, we simply keep trying until the transmit packet system call succeeds.
+
+
+
+2. How did you structure your receive implementation? In particular, what do you do if the receive ring is empty and a user environment requests the next incoming packet?
+
+Pre-receive (initialization) we do:
+  a. Initialize the RFA and set all the links to hook up the ring.
+  b. Start the RU.
+
+Receive:
+  a. The syscall invokes e100_receive_packet()
+  b. e100_receive_packet() checks if the RFD header is processed, if so copy the data into the user's specified struct
+  c. If there are no packets which have been processed, then we return an error.
+
+In net/input.c, we spin (and sched_yield()) until a packet can be read off the buffer.
+
+3. How long approximately did it take you to do this lab?
+40 hours (Challenge took 12 hours)
+
+---
+
+Challenge! Find out what a zero copy driver means and modify your E100 driver and system call interface to be zero copy.
+
+Transmit:
+Here the main difficulty was realizing that the CU in flexible mode actually defaults to 2 TBDs automatically stored.  After figuring this out, we augmented the TCB data structure with a TBD and filler TBD entry (2 new TBDs). We then point the buffer address of the first TBD to the packet location + sizeof(int) such that the CU will pull from the packet data location. 
+
+Receive:
+The main difficulty with the receive was being able to write the packet data to a location which the user process can receive.  Because we could not get the kernel to write to a specified user address, we instead had the user process in net/input.c perform a page_alloc() and then use a system call to notify the e100 of these pages.  We are a bit wasteful in the sense that we allocate one page per packet slot in the RBD ring.
+1. We define a new RBD ring in e100.c.
+2. We map a page per buffer slot in the user process and then notify the e100 of these buffers.
+3. The e100 maps these buffers into the RBD ring and then starts the RU.  Note that in linking the RBDs to the buffers, we actually map the physical address of the page + sizeof(int).  This is because we are actually going to write a jif_packet at the front of each page and want to reserve a byte for the size.
+4. In the e100_receive_packet we pull out the size and write it to the front of the page.
+5. input.c can now simply cast the page into a jif_packet.
+

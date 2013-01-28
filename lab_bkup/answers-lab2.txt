@@ -1,0 +1,81 @@
+Sean Liu
+6.828
+Lab 2 Write-up
+10/01/2009
+
+===
+
+1. Assuming that the following JOS kernel code is correct, what type should variable x have, uintptr_t or physaddr_t?
+
+x must be of the type unintptr_t.
+
+We can tell because "value" must be a virtual address since "value" is dereferenced.  From the preceding paragraph, "the kernel can't sensibly dereference a physical address."
+
+===
+
+2. What entries (rows) in the page directory have been filled in at this point? What addresses do they map and where do they point? In other words, fill out this table as much as possible:
+
+Entry	Base Virtual Address	Points to (logically):
+1023	0xffc0000		Page table for top 4MB of phys memory
+1022	0xff80000		Page table for second to top 4MB of phys mem
+.
+960	0xf0000000		Page table for bottom 4MB of phys memory
+959	0xefc00000		Current page table, kernel RW
+958	0xef800000		(0xefbfe000 - 0xefc00000 Kernel stack)
+				(0xef800000 - 0xefbfe000 Invalid memory)
+957     0xef400000              Current page table kernel R-, user R-
+956	0xef000000		User pages
+.
+2	0x00800000
+1	0x00400000
+0	0x00000000		<Nothing, mapping got cleared>
+
+==
+
+3. After check_boot_pgdir(), i386_vm_init() maps the first four MB of virtual address space to the first four MB of physical memory, then deletes this mapping at the end of the function. Why is this mapping necessary? What would happen if it were omitted? Does this actually limit our kernel to be 4MB? What must be true if our kernel were larger than 4MB?
+
+The extra page mapping from 0 to 4MB is required by the kernel in transitioning from segmentation-only to paging-only.  Throughout the process, we require that the kernel be able to access its code in physical memory.  Initially, segmentation maps memory above KERNBASE to physical memory 0x0.  Once paging turns on, we need to have a mapping from 0x0 linear address to 0x0 physical address.  This is where the mapping is necessary.
+
+Once we turn off segmentation, we no longer have the KERNBASE virtual address to 0x0 linear address mapping.  At this point we can remove the first four MB of virtual address space.
+
+If this were ommitted, then once paging is enabled, there would be no mapping from 0x0 linear address to 0x0 physical address, and the kernel would not even have access to its own code.  This would be bad.
+
+It limits our kernel to be 4MB because we only set up the mapping of the first four MB of physical memory.  If our kernel were larger than 4MB, we would need additional pages to be mapped.
+
+===
+
+4.(From Lecture 4) We have placed the kernel and user environment in the same address space. Why will user programs not be able to read or write the kernel's memory? What specific mechanisms protect the kernel memory?
+
+This is because the virtual memory is divided into segments by ULIM and UTOP.  (ULIM, 4GB) is Kernel only, (UTOP, ULIM] both the Kernel and User environment can read, and [0x0, UTOP] is User environment space.  These memory spaces are protected by the permission bits, such as PTE_W (writeable) and PTE_U (user), which are set in the page table / directory entry flags.
+
+The specific mechanisms used to protect are the Current Privilege Level (CPL), the low 2 bits of CS.  CPL=0 is privileged O/S, CPL=3 is user.  This is used to detect the current mode and whether or not we can write to the virtual memory addresses.
+
+===
+
+5. What is the maximum amount of physical memory that this operating system can support? Why?
+
+From kern/pmap.h, the maximum amount of physical memory this operating system can support is 256 MB.  This is because we want to be able to map all the linear addresses to all physical addresses. It turns out doing so makes it much easier to deal with reverse mapping from physical addresses to virtual addresses, which is very useful for the system.
+
+===
+
+6. How much space overhead is there for managing memory, if we actually had the maximum amount of physical memory? How is this overhead broken down?
+
+A bit over 4MB.  There are page tables and page dir.  From lecture, we have 1024 page tables, and 1 page dir.  Therefore the total space overhead = 4KB * 1024 + 4KB.
+
+===
+
+Challenge Write-up
+
+I worked on the last challenge question, exposing the "alloc_page", "free_page", and "page_status" commands to the kernel monitor.  We added the appropriate monitor commands to monitor.h and monitor.c.  "alloc_page" is used to allocate the next free page in the page free list and returns that address.  The "page_status" command checks if a page is either "free" or "allocated".  Finally, the "page_free" command frees the page at a given address.
+
+The first thing we did was create a parser which takes in the string version of a hex number.  We augmented the string.c library with a function strtoint(), which takes a string in the format "0x????" and returns the corresponding integer.  The function walks down the characters and multiplies by the appropriate base.
+
+The "alloc_page" function calls the page_alloc() method defined in kern/pmap.c  Note that we also change pp_ref of the Page struct to be 1.  We are essentially overloading pp_ref to also serve as an indicator of whether or not a page was allocated.
+
+The "free_page" function first sets the pp_ref flag to 0, and then calls the page_free() method.  Note that this is potentially dangerous if something is using the page in question.  Therefore it must be used with caution when debugging.
+
+The "page_status" function extracts the address passed in and converts it to a page.  It then examines the pp_ref flag of the page.  0 corresponds to free, and anything greater than 0 corresponds to allocated.
+
+Finally, we exposed our strtoint method as hex_to_int.  Just a quick debugging function so we don't have to keep loading athena's calculator.
+
+

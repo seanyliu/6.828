@@ -1,0 +1,26 @@
+Sean Liu
+6.828
+Nov 12, 2009
+
+Lab 5
+
+1. How long approximately did it take you to do this lab?
+14 hours
+
+---
+
+Challenge!  Make the file access operations lazy, so that the pages of a file are only mapped into the client environment's address space when they are touched. Be sure you can still handle error conditions gracefully, such as the file system environment running out of memory while the application is trying to read a particular file block. 
+
+At the conceptual level, we no longer map file pages immediately on the call to open.  Instead, we only map these pages when we acces them in the calls to file_read(), file_write(), and read_map().
+
+Specifically, we make the following changes in lib/file.c:
+
+1. In open(), we remove the call to fmap(), since we no longer want to immediately map all the file pages.
+
+2. In file_read(), we check if any of the virtual addresses are not mapped between (fd2data(fd) + offset) and (fd2data(fd) + offset + n), by performing a for loop and checking the present bits.  If any of these pages are unmapped, we perform a fmap from offset to offset + n.
+
+3. Likewise, in file_write() we perform an identical operation to file_read, checking and mapping the pages which are used.
+
+4. Finally, in read_map, we need to verify that the page we find is mapped.  If it is not mapped, we perform an fmap from offset to offset + 1.
+
+

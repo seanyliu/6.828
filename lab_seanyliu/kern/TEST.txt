@@ -1,0 +1,341 @@
+11d10
+< #include <kern/env.h>
+119a119
+>         // seanyliu
+121a122,133
+>         /*
+>         uint32_t temp_freemem; // seanyliu
+>         temp_freemem = (uint32_t)boot_freemem & (0 - align);
+>         if (boot_freemem > temp_freemem) {
+>           boot_freemem = temp_freemem + align;
+>         } else {
+>         }
+>         */
+>         uint32_t rem = (uint32_t)boot_freemem % align;
+>         if (rem != 0) boot_freemem = boot_freemem + align - rem;
+>         // else boot_freemem = boot_freemem - rem;
+> 
+122a135,136
+>         v = boot_freemem;
+> 
+123a138,142
+>         boot_freemem += n;
+>         if (PADDR(boot_freemem) > maxpa) {
+>           panic("boot_alloc, allocating beyond our memory capacity");
+>         }
+> 
+125,128c144
+< 	assert(n % align == 0); // xyb: a little strong...
+< 	boot_freemem = ROUNDUP(boot_freemem, align);
+< 	v = boot_freemem;
+< 	boot_freemem += n;
+---
+>         return v;
+130c146
+< 	return v;
+---
+> 	//return NULL;
+153c169,170
+< 	// panic("i386_vm_init: This function is not finished\n");
+---
+>         // seanyliu
+> 	//panic("i386_vm_init: This function is not finished\n");
+182,183d198
+< 	n = ROUNDUP(npage * sizeof(struct Page), PGSIZE);
+< 	pages = boot_alloc(n, PGSIZE);
+185,190c200,202
+< 
+< 	//////////////////////////////////////////////////////////////////////
+< 	// Make 'envs' point to an array of size 'NENV' of 'struct Env'.
+< 	// LAB 3: Your code here.
+< 	n = ROUNDUP(NENV * sizeof(struct Env), PGSIZE);
+< 	envs = boot_alloc(n, PGSIZE);
+---
+>         // seanyliu
+>         n = npage * sizeof(struct Page);
+>         pages = boot_alloc(n, sizeof(struct Page));
+208d219
+< 	// (ie. perm = PTE_U | PTE_P)
+210,211c221,223
+< 	//    - pages -- kernel RW, user NONE
+< 	//    - the read-only version mapped at UPAGES -- kernel R, user R
+---
+> 	//    - the new image at UPAGES -- kernel R, user R
+> 	//      (ie. perm = PTE_U | PTE_P)
+> 	//    - pages itself -- kernel RW, user NONE
+213,215c225,226
+< 	n = ROUNDUP(npage * sizeof(struct Page), PGSIZE);
+< 	boot_map_segment(pgdir, UPAGES, n, PADDR(pages), PTE_U | PTE_P);
+< 	// xyb: kernel pages will be mapped below:
+---
+>         //n = sizeOf(struct Page) * npage;
+>         //boot_alloc(n, 
+218,229c229,230
+< 	// Map the 'envs' array read-only by the user at linear address UENVS
+< 	// (ie. perm = PTE_U | PTE_P).
+< 	// Permissions:
+< 	//    - envs itself -- kernel RW, user NONE
+< 	//    - the image of envs mapped at UENVS  -- kernel R, user R
+< 	// LAB 3: Your code here.
+< 	n = ROUNDUP(NENV * sizeof(struct Env), PGSIZE);
+< 	boot_map_segment(pgdir, UENVS, n, PADDR(envs), PTE_U | PTE_P);
+< 	// xyb: kernel pages will be mapped below:
+< 
+< 	//////////////////////////////////////////////////////////////////////
+< 	// Map the kernel stack (symbol name "bootstack").  The complete VA
+---
+>         // Use the physical memory that bootstack refers to as
+>         // the kernel stack.  The complete VA
+236,238d236
+< 	boot_map_segment(pgdir, KSTACKTOP-KSTKSIZE, KSTKSIZE,
+< 			 PADDR(bootstack), PTE_W | PTE_P);  
+< 	boot_map_segment(pgdir, KSTACKTOP-PTSIZE, PTSIZE-KSTKSIZE, 0, 0);  
+245c243
+< 	// we just set up the amapping anyway.
+---
+> 	// we just set up the mapping anyway.
+248d245
+< 	boot_map_segment(pgdir, KERNBASE, ~KERNBASE+1, 0, PTE_W | PTE_P);
+386,389d382
+< 	// check envs array (new test for lab 3)
+< 	n = ROUNDUP(NENV*sizeof(struct Env), PGSIZE);
+< 	for (i = 0; i < n; i += PGSIZE)
+< 		assert(check_va2pa(pgdir, UENVS + i) == PADDR(envs) + i);
+392c385
+< 	for (i = 0; i < npage; i += PGSIZE)
+---
+> 	for (i = 0; i < npage * PGSIZE; i += PGSIZE)
+406d398
+< 		case PDX(UENVS):
+469,470d460
+< 	for (i = 0; i < npage; i++) {
+< 		pages[i].pp_ref = 0;
+472,475c462,464
+< 		if (i == 0)
+< 			continue;
+< 		if (i >= PPN(IOPHYSMEM) && i < PPN(boot_freemem))
+< 			continue;
+---
+>         // seanyliu
+> 	// 1) Mark page 0 as in use
+> 	pages[0].pp_ref = 1;
+476a466,468
+> 	// 2) Mark the rest of base memory as free
+> 	for (i = 0; i < PPN(IOPHYSMEM); i++) {
+> 		pages[i].pp_ref = 0;
+478a471,498
+> 
+> 	// 3) Then comes the IO hole
+> 	for (i = PPN(IOPHYSMEM); i < PPN(EXTPHYSMEM); i++) {
+>         	pages[i].pp_ref = 0;
+>                 // DO NOT LIST_INSERT_HEAD
+>         }
+> 
+> 	// 4) Then extended memory
+> 	//cprintf("boot_freemem: %x\n", boot_freemem);
+> 	//cprintf("EXTPHYSMEM: %x\n", EXTPHYSMEM);
+> 	//cprintf("npage (dec): %d\n", npage);
+> 	//cprintf("boot_freemem - KERNBASE: %x\n", boot_freemem - KERNBASE);
+> 	//cprintf("KERNBASE: %x\n", KERNBASE);
+> 	//cprintf("maxpa: %x\n", maxpa);
+> 	for (i = PPN(EXTPHYSMEM); i < PPN(PADDR(boot_freemem)); i++) {
+>         	pages[i].pp_ref = 0;
+>                 // DO NOT LIST_INSERT_HEAD
+>         }
+> 
+>         for (i = PPN(PADDR(boot_freemem)); i < npage; i++) {
+> 		pages[i].pp_ref = 0;
+>         }
+> 
+> 	// Staff code below:
+> 	//for (i = 0; i < npage; i++) {
+> 	//	pages[i].pp_ref = 0;
+> 	//	LIST_INSERT_HEAD(&page_free_list, &pages[i], pp_link);
+> 	//}
+510,521c530,536
+< 	struct Page *page;
+< 
+< 	page = LIST_FIRST(&page_free_list);
+< 	if (page == NULL)
+< 		return -E_NO_MEM;
+< 
+< 	LIST_REMOVE(page, pp_link);
+< 	page_initpp(page);
+< 
+< 	if (pp_store != NULL)
+< 		*pp_store = page;
+< 
+---
+> 	// seanyliu
+> 	if (LIST_EMPTY(&page_free_list)) {
+>   		return -E_NO_MEM;
+> 	}
+> 	*pp_store = LIST_FIRST(&page_free_list);
+> 	LIST_REMOVE(*pp_store, pp_link);
+> 	page_initpp(*pp_store);
+533c548
+< 	assert(pp->pp_ref == 0);
+---
+> 	// seanyliu
+556a572
+> //    - pgdir_walk clears the new page table.
+560a577,580
+> //
+> // Hint 2: the x86 MMU checks permission bits in both the page directory
+> // and the page table, so it's safe to leave permissions in the page
+> // more permissive than strictly necessary.
+563a584
+> 
+565,566c586
+< 	pde_t *pde_p;
+< 	pte_t *pte_p;
+---
+> 	// return NULL;
+568,570c588,590
+< 	pde_p = &pgdir[PDX(va)];
+< 	if (!(*pde_p & PTE_P)) {
+< 		struct Page *page;
+---
+> 	// seanyliu
+> 	uint32_t pgdir_entry;
+>         pte_t *pgtbl_entry;
+572c592,595
+< 		if (!create)
+---
+>         pgdir_entry = pgdir[PDX(va)];
+>         if (!(pgdir_entry & PTE_P)) {
+> 		struct Page *page;
+> 		if (!create) {
+574,575c597,598
+< 
+< 		if (page_alloc(&page) != 0)
+---
+> 		}
+> 		if (page_alloc(&page) != 0) {
+576a600
+> 		}
+578,579c602
+< 		memset(page2kva(page), 0, PGSIZE);
+< 		*pde_p = page2pa(page) | PTE_P | PTE_W;
+---
+> 		pgdir_entry = page2pa(page) | PTE_P | PTE_W;
+582c605
+< 	pte_p = (pte_t *)KADDR(PTE_ADDR(*pde_p));
+---
+> 	pgtbl_entry = KADDR(PTE_ADDR(pgdir_entry));
+584c607
+< 	return &pte_p[PTX(va)];
+---
+>         return &pgtbl_entry[PTX(va)];
+592,595c615,618
+< // Details
+< //   - If there is already a page mapped at 'va', it is page_remove()d.
+< //   - If necessary, on demand, allocates a page table and inserts it into
+< //     'pgdir'.
+---
+> // Requirements
+> //   - If there is already a page mapped at 'va', it should be page_remove()d.
+> //   - If necessary, on demand, a page table should be allocated and inserted
+> //     into 'pgdir'.
+598a622,624
+> // Corner-case hint: Make sure to consider what happens when the same 
+> // pp is re-inserted at the same virtual address in the same pgdir.
+> //
+609a636,638
+> 	//return 0;
+> 
+> 	// Fill this function in
+643a673,674
+> 
+> 	// seanyliu
+657a689
+> 
+666c698
+< // Return 0 if there is no page mapped at va.
+---
+> // Return NULL if there is no page mapped at va.
+673a706,708
+> 	// return NULL;
+> 
+> 	// seanyliu
+682a718
+>         cprintf("HI");
+683a720
+>         cprintf("BY");
+704a742,745
+> 	// seanyliu
+> 
+> 
+> 	// Fill this function in
+714a756
+> 
+729,793d770
+< static uintptr_t user_mem_check_addr;
+< 
+< //
+< // Check that an environment is allowed to access the range of memory
+< // [va, va+len) with permissions 'perm | PTE_P'.
+< // Normally 'perm' will contain PTE_U at least, but this is not required.
+< // 'va' and 'len' need not be page-aligned; you must test every page that
+< // contains any of that range.  You will test either 'len/PGSIZE',
+< // 'len/PGSIZE + 1', or 'len/PGSIZE + 2' pages.
+< //
+< // A user program can access a virtual address if (1) the address is below
+< // ULIM, and (2) the page table gives it permission.  These are exactly
+< // the tests you should implement here.
+< //
+< // If there is an error, set the 'user_mem_check_addr' variable to the first
+< // erroneous virtual address.
+< //
+< // Returns 0 if the user program can access this range of addresses,
+< // and -E_FAULT otherwise.
+< //
+< int
+< user_mem_check(struct Env *env, const void *va, size_t len, int perm)
+< {
+< 	// LAB 3: Your code here. 
+< 	void *low_va = (void *)ROUNDDOWN(va, PGSIZE);
+< 	void *high_va = (void *)ROUNDDOWN(va+len, PGSIZE);
+< 	pte_t *pte_p;
+< 
+< 	assert(env != NULL);
+< 
+< 	// xyb: Should we do this? Maybe page perm is enough.
+< #if 0
+< 	if (va + len > ULIM) {
+< 		user_mem_check_addr = ULIM;
+< 		return -E_FAULT;
+< 	}
+< #endif
+< 
+< 	for (va = low_va; va <= high_va; va += PGSIZE) {
+< 		pte_p = pgdir_walk(env->env_pgdir, va, 0);
+< 		if ((*pte_p & (perm|PTE_P)) != (perm|PTE_P)) {
+< 			user_mem_check_addr = (uintptr_t)va;
+< 			return -E_FAULT;
+< 		}
+< 	}
+< 
+< 	return 0;
+< }
+< 
+< //
+< // Checks that environment 'env' is allowed to access the range
+< // of memory [va, va+len) with permissions 'perm | PTE_U'.
+< // If it can, then the function simply returns.
+< // If it cannot, 'env' is destroyed.
+< //
+< void
+< user_mem_assert(struct Env *env, const void *va, size_t len, int perm)
+< {
+< 	if (user_mem_check(env, va, len, perm | PTE_U) < 0) {
+< 		cprintf("[%08x] user_mem_check assertion failure for "
+< 			"va %08x\n", curenv->env_id, user_mem_check_addr);
+< 		env_destroy(env);	// may not return
+< 	}
+< }
+< 
+860a838
+> 	assert(boot_pgdir[0] & PTE_U);
+866a845
+> 	assert(!(*pgdir_walk(boot_pgdir, (void*) PGSIZE, 0) & PTE_U));

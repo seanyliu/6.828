@@ -1,0 +1,64 @@
+6828 decimal is 15254 octal!
+Physical memory: 66556K available, base = 640K, extended = 65532K
+check_page_alloc() succeeded!
+page_check() succeeded!
+check_boot_pgdir() succeeded!
+enabled interrupts: 1 2 4
+	     Setup timer interrupts via 8259A
+enabled interrupts: 0 1 2 4
+	     unmasked timer interrupt
+PCI: 00:00.0: 8086:1237: class: 6.0 (Bridge device) irq: 0
+PCI: 00:01.0: 8086:7000: class: 6.1 (Bridge device) irq: 0
+PCI: 00:01.1: 8086:7010: class: 1.1 (Storage controller) irq: 0
+PCI: 00:01.3: 8086:7113: class: 6.80 (Bridge device) irq: 9
+PCI: 00:02.0: 1013:00b8: class: 3.0 (Display controller) irq: 0
+PCI: 00:03.0: 8086:1209: class: 2.0 (Network controller) irq: 11
+nop at cbl index: 00000000
+cbl_to_process now moved to: 00000001
+Entering start CU
+Starting CU...
+CU Started.
+PCI: 00:04.0: 1af4:1002: class: 5.0 (Memory controller) irq: 9
+FS is running
+FS can do I/O
+Device 1 presence: 1
+superblock is good
+write_block is good
+read_bitmap is good
+alloc_block is good
+file_open is good
+file_get_block is good
+file_flush is good
+file_truncate is good
+file rewrite is good
+going to read in child (might page fault if your sharing is buggy)
+read in child succeeded
+read in parent succeeded
+write write
+write done
+going to write in child
+write write
+write done
+write in child finished
+write to file data page failed; got This 
+Welcome to the JOS kernel monitor!
+Type 'help' for a list of commands.
+TRAP frame at 0xf035b180
+  edi  0x00001007
+  esi  0x0000005c
+  ebp  0xeebfdfd0
+  oesp 0xefbfffdc
+  ebx  0x00000000
+  edx  0xeebfde70
+  ecx  0x0000002a
+  eax  0x0000002a
+  es   0x----0023
+  ds   0x----0023
+  trap 0x00000003 Breakpoint
+  err  0x00000000
+  eip  0x0080033c
+  cs   0x----001b
+  flag 0x00000286
+  esp  0xeebfdfb8
+  ss   0x----0023
+K> 
